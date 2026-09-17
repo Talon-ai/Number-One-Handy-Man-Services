@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number One Handyman Services | Premium Building, Renovations, Plumbing & Electrical</title>
+    <meta name="description" content="Number One Handyman Services provides elite craftsmanship in General Building, Home Renovations, Professional Plumbing, and Electrical Services across South Africa. Contact 073 314 6069 for a free quote.">
+    <meta name="theme-color" content="#FFFFFF">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Number One Handyman Services | Elite Craftsmanship">
+    <meta property="og:description" content="General Building, Home Renovations, Professional Plumbing, and Electrical Services. Quality work, reliable response.">
+    <meta property="og:url" content="https://numberonehandyman.co.za/">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0066FF',
+                            blueHover: '#0A84FF',
+                            bg: '#FFFFFF',
+                            surface: '#F8FAFC',
+                            surfaceDark: '#0B0F17',
+                            card: '#FFFFFF',
+                            darkText: '#0F172A',
+                            mutedText: '#475569',
+                            border: '#E2E8F0',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Structured Data (LocalBusiness) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "Number One Handyman Services",
+      "image": "assets/number-one-handyman-hero.jpg",
+      "telephone": "+27733146069",
+      "url": "https://numberonehandyman.co.za/",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ZA"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "areaServed": "Local Community and Surrounding Areas"
+    }
+    </script>
+
+    <style>
+        /* Modern Clean Light Theme Glassmorphism & Custom Styling */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #0F172A;
+            overflow-x: hidden;
+        }
+
+        /* Glassmorphism Styles tuned for White/Light Background with Blue/Black Accents */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(0, 102, 255, 0.12);
+            box-shadow: 0 20px 40px -15px rgba(0, 102, 255, 0.07), 0 0 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .glass-panel-dark {
+            background: rgba(11, 15, 23, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .blue-glow {
+            box-shadow: 0 10px 30px -10px rgba(0, 102, 255, 0.35);
+        }
+
+        .blue-glow-lg {
+            box-shadow: 0 20px 50px -10px rgba(0, 102, 255, 0.25);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #0066FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .blue-gradient-text {
+            background: linear-gradient(135deg, #0066FF 0%, #0A84FF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Architectural Grid Pattern background */
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(0, 102, 255, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 102, 255, 0.04) 1px, transparent 1px);
+        }
+
+        /* Subtle scroll animations */
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal-element {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F5F9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0066FF;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0052CC;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-blue selection:text-white">
+
+    <!-- ASSET CONFIGURATION & STATE SCRIPTS -->
+    <script>
+        // Centralized Image Configuration
+        const SITE_ASSETS = {
+            hero: "assets/number-one-handyman-hero.jpg",
+            heroFallback: "https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?auto=format&fit=crop&w=1200&q=80",
+            renovations: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
+            building: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80",
+            plumbing: "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80",
+            electrical: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80",
+            before: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80",
+            after: "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=800&q=80"
+        };
+    </script>
+
+    <!-- SECTION 01 — PRELOADER -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-500">
+        <div class="relative flex flex-col items-center">
+            <div class="w-16 h-16 border-4 border-slate-100 border-t-brand-blue rounded-full animate-spin"></div>
+            <div class="mt-6 flex items-center space-x-2">
+                <span class="text-xl font-extrabold tracking-tight text-slate-900">NUMBER ONE</span>
+                <span class="text-xs font-bold tracking-widest bg-brand-blue text-white px-2 py-0.5 rounded">HANDYMAN</span>
+            </div>
+            <p class="text-xs font-medium text-slate-500 mt-2 tracking-widest uppercase">Elite Craftsmanship</p>
+        </div>
+    </div>
+
+    <!-- SECTION 02 — STICKY GLASS NAVIGATION -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-10 h-10 bg-slate-900 rounded-lg flex items-center justify-center text-brand-blue group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300 shadow-md">
+                        <i class="fa-solid fa-hammer text-lg"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg leading-tight tracking-tight text-slate-900 group-hover:text-brand-blue transition-colors">NUMBER ONE</span>
+                        <span class="text-[10px] font-bold tracking-widest text-brand-blue uppercase">Handyman Services</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-semibold text-slate-800 hover:text-brand-blue transition-colors">Home</a>
+                    <a href="#services" class="text-sm font-semibold text-slate-800 hover:text-brand-blue transition-colors">Services</a>
+                    <a href="#calculator" class="text-sm font-semibold text-slate-800 hover:text-brand-blue transition-colors">Quote Estimator</a>
+                    <a href="#projects" class="text-sm font-semibold text-slate-800 hover:text-brand-blue transition-colors">Projects</a>
+                    <a href="#why-us" class="text-sm font-semibold text-slate-800 hover:text-brand-blue transition-colors">About Us</a>
+                    <a href="#contact" class="text-sm font-semibold text-slate-800 hover:text-brand-blue transition-colors">Contact</a>
+                </nav>
+
+                <!-- Desktop Quick Actions -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="tel:+27733146069" class="flex items-center space-x-2 text-xs font-bold text-slate-900 bg-slate-100 px-4 py-2.5 rounded-lg border border-slate-200 hover:bg-slate-200 transition-colors">
+                        <i class="fa-solid fa-phone text-brand-blue"></i>
+                        <span>073 314 6069</span>
+                    </a>
+                    <a href="https://wa.me/27733146069" target="_blank" rel="noopener" class="flex items-center space-x-2 text-xs font-bold text-white bg-brand-blue hover:bg-blue-700 px-5 py-2.5 rounded-lg blue-glow transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span>WhatsApp Lead</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-lg text-slate-800 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-blue" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                    <i id="hamburger-icon" class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 transition-all duration-300">
+            <a href="#home" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-slate-100 hover:text-brand-blue">Home</a>
+            <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-slate-100 hover:text-brand-blue">Services</a>
+            <a href="#calculator" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-slate-100 hover:text-brand-blue">Quote Estimator</a>
+            <a href="#projects" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-slate-100 hover:text-brand-blue">Projects</a>
+            <a href="#why-us" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-slate-100 hover:text-brand-blue">About Us</a>
+            <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-md text-base font-medium text-slate-800 hover:bg-slate-100 hover:text-brand-blue">Contact</a>
+            
+            <div class="pt-4 border-t border-slate-200 flex flex-col space-y-2">
+                <a href="tel:+27733146069" class="w-full flex items-center justify-center space-x-2 text-sm font-bold text-slate-900 bg-slate-100 py-3 rounded-lg">
+                    <i class="fa-solid fa-phone text-brand-blue"></i>
+                    <span>Call 073 314 6069</span>
+                </a>
+                <a href="https://wa.me/27733146069" target="_blank" rel="noopener" class="w-full flex items-center justify-center space-x-2 text-sm font-bold text-white bg-brand-blue py-3 rounded-lg blue-glow">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Instant WhatsApp Chat</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 03 — HERO EXPERIENCE -->
+    <section id="home" class="relative pt-28 pb-16 md:pt-36 md:pb-28 overflow-hidden bg-grid-pattern">
+        <!-- Accent Glow Blobs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-blue/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column: Copy & Actions -->
+                <div class="lg:col-span-6 space-y-6 text-left reveal-element">
+                    <div class="inline-flex items-center space-x-2 bg-slate-900 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-brand-blue animate-pulse"></span>
+                        <span class="tracking-wider uppercase text-[11px]">South Africa Service Professional</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1]">
+                        Elite Craftsmanship. <br>
+                        <span class="text-brand-blue">Total Peace of Mind.</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-xl">
+                        Number One Handyman Services delivers premier property solutions with unmatched precision. From structural building work to custom renovations, plumbing, and electrical precision.
+                    </p>
+
+                    <!-- Service Pills -->
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <span class="inline-flex items-center text-xs font-bold bg-white text-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+                            <i class="fa-solid fa-check text-brand-blue mr-1.5"></i> General Building
+                        </span>
+                        <span class="inline-flex items-center text-xs font-bold bg-white text-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+                            <i class="fa-solid fa-check text-brand-blue mr-1.5"></i> Home Renovations
+                        </span>
+                        <span class="inline-flex items-center text-xs font-bold bg-white text-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+                            <i class="fa-solid fa-check text-brand-blue mr-1.5"></i> Plumbing
+                        </span>
+                        <span class="inline-flex items-center text-xs font-bold bg-white text-slate-800 px-3 py-1.5 rounded-lg border border-slate-200 shadow-sm">
+                            <i class="fa-solid fa-check text-brand-blue mr-1.5"></i> Electrical
+                        </span>
+                    </div>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+                        <a href="#calculator" class="flex items-center justify-center space-x-2 bg-brand-blue hover:bg-blue-700 text-white font-bold text-sm px-7 py-4 rounded-xl blue-glow transition-all duration-300 transform hover:-translate-y-0.5">
+                            <span>Get an Instant Quote</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#services" class="flex items-center justify-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm px-7 py-4 rounded-xl transition-all duration-300">
+                            <span>Explore Services</span>
+                        </a>
+                    </div>
+
+                    <!-- Direct Contact Banner -->
+                    <div class="pt-4 border-t border-slate-200 flex items-center space-x-4 text-xs font-semibold text-slate-600">
+                        <span class="flex items-center"><i class="fa-solid fa-shield-halved text-brand-blue mr-1.5"></i> Quality Guaranteed</span>
+                        <span class="flex items-center"><i class="fa-solid fa-clock text-brand-blue mr-1.5"></i> Reliable Response</span>
+                    </div>
+                </div>
+
+                <!-- Hero Right Column: Primary Visual Asset -->
+                <div class="lg:col-span-6 reveal-element">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        
+                        <!-- Main Image Container with Architectural Glass Border -->
+                        <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-900/10 group">
+                            <!-- Hero Image -->
+                            <img 
+                                src="assets/number-one-handyman-hero.jpg" 
+                                onerror="this.src=SITE_ASSETS.heroFallback"
+                                alt="Number One Handyman Services construction and building work" 
+                                class="w-full h-[480px] sm:h-[560px] object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                                fetchpriority="high"
+                            >
+                            
+                            <!-- Dark Gradient & Atmospheric Blue Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+
+                            <!-- Integrated Overlay Card: Glassmorphic Information Panel -->
+                            <div class="absolute bottom-6 left-6 right-6 p-6 rounded-xl glass-panel-dark">
+                                <div class="flex items-start justify-between">
+                                    <div>
+                                        <p class="text-[10px] font-bold tracking-widest text-brand-blue uppercase">Featured Expertise</p>
+                                        <h2 class="text-xl font-bold text-white mt-1">NUMBER ONE HANDYMAN</h2>
+                                        <p class="text-xs text-slate-300 mt-1">On-Site Structural Building & Maintenance</p>
+                                    </div>
+                                    <span class="w-3 h-3 rounded-full bg-emerald-500 border-2 border-slate-900" title="Active On-Site Service"></span>
+                                </div>
+                                <div class="mt-4 pt-3 border-t border-white/10 flex justify-between items-center text-xs text-slate-300">
+                                    <span>Direct Line: <strong class="text-white">073 314 6069</strong></span>
+                                    <a href="https://wa.me/27733146069" target="_blank" class="text-brand-blue hover:text-blue-400 font-bold flex items-center">
+                                        WhatsApp <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Glass Badge -->
+                        <div class="absolute -top-4 -left-4 hidden sm:flex items-center space-x-3 bg-white/90 backdrop-blur-md px-4 py-3 rounded-xl border border-slate-200 shadow-xl">
+                            <div class="w-8 h-8 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue">
+                                <i class="fa-solid fa-certificate text-sm"></i>
+                            </div>
+                            <div class="text-left">
+                                <p class="text-xs font-bold text-slate-900">Verified Service</p>
+                                <p class="text-[10px] text-slate-500">Professional Tradesmen</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 04 — TRUST / STATISTICS -->
+    <section class="py-10 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                
+                <div class="p-4 border-r border-slate-800 last:border-r-0">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-blue">Building</div>
+                    <div class="text-xs text-slate-400 mt-1 font-medium uppercase tracking-wider">Structural & Repairs</div>
+                </div>
+
+                <div class="p-4 border-r border-slate-800 last:border-r-0">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-blue">Renovations</div>
+                    <div class="text-xs text-slate-400 mt-1 font-medium uppercase tracking-wider">Full Property Upgrades</div>
+                </div>
+
+                <div class="p-4 border-r border-slate-800 last:border-r-0">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-blue">Plumbing</div>
+                    <div class="text-xs text-slate-400 mt-1 font-medium uppercase tracking-wider">Installations & Fixes</div>
+                </div>
+
+                <div class="p-4">
+                    <div class="text-2xl sm:text-3xl font-extrabold text-brand-blue">Electrical</div>
+                    <div class="text-xs text-slate-400 mt-1 font-medium uppercase tracking-wider">Maintenance & Safety</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 05 — SERVICES ARCHITECTURE -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                <p class="text-xs font-extrabold tracking-widest text-brand-blue uppercase">Core Competencies</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-2">Comprehensive Property Solutions</h2>
+                <p class="text-slate-600 mt-3 text-base">Delivering specialized, high-grade services designed to maintain, renovate, and elevate your residential or commercial space.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- CARD 01: General Building -->
+                <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between hover:border-brand-blue transition-all duration-300 group reveal-element">
+                    <div>
+                        <div class="w-14 h-14 bg-slate-900 text-brand-blue rounded-xl flex items-center justify-center text-2xl group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300 mb-6">
+                            <i class="fa-solid fa-hammer"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 tracking-wider">SERVICE 01</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1">General Building</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Structural modifications, brickwork repairs, general maintenance, and comprehensive building fixes for long-term durability.</p>
+                        
+                        <ul class="mt-6 space-y-2 text-xs font-semibold text-slate-700">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Wall Repairs & Plastering</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Structural Maintenance</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> General Property Fixes</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-slate-200/60 flex items-center justify-between">
+                        <button onclick="openServiceModal('building')" class="text-xs font-bold text-slate-900 hover:text-brand-blue flex items-center">
+                            Learn Details <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                        </button>
+                        <a href="https://wa.me/27733146069?text=Hello%20Number%20One%20Handyman,%20I%20am%20interested%20in%20General%20Building%20services." class="text-brand-blue hover:text-blue-700 text-lg" title="Quick Quote">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 02: Home Renovations -->
+                <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between hover:border-brand-blue transition-all duration-300 group reveal-element">
+                    <div>
+                        <div class="w-14 h-14 bg-slate-900 text-brand-blue rounded-xl flex items-center justify-center text-2xl group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300 mb-6">
+                            <i class="fa-solid fa-paint-roller"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 tracking-wider">SERVICE 02</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1">Home Renovations</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Complete remodeling, kitchen and bathroom modernization, interior refinishing, and custom living space upgrades.</p>
+                        
+                        <ul class="mt-6 space-y-2 text-xs font-semibold text-slate-700">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Bathroom & Kitchen Remodeling</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Tiling & Flooring Installation</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Interior Refinishing</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-slate-200/60 flex items-center justify-between">
+                        <button onclick="openServiceModal('renovations')" class="text-xs font-bold text-slate-900 hover:text-brand-blue flex items-center">
+                            Learn Details <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                        </button>
+                        <a href="https://wa.me/27733146069?text=Hello%20Number%20One%20Handyman,%20I%20am%20interested%20in%20Home%20Renovation%20services." class="text-brand-blue hover:text-blue-700 text-lg" title="Quick Quote">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 03: Plumbing -->
+                <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between hover:border-brand-blue transition-all duration-300 group reveal-element">
+                    <div>
+                        <div class="w-14 h-14 bg-slate-900 text-brand-blue rounded-xl flex items-center justify-center text-2xl group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300 mb-6">
+                            <i class="fa-solid fa-faucet-drip"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 tracking-wider">SERVICE 03</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1">Professional Plumbing</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Expert leak resolution, pipe installations, fixture fittings, geyser servicing, and reliable system diagnostic work.</p>
+                        
+                        <ul class="mt-6 space-y-2 text-xs font-semibold text-slate-700">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Leak Detection & Repair</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Sanitary Ware Installation</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Pipework Maintenance</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-slate-200/60 flex items-center justify-between">
+                        <button onclick="openServiceModal('plumbing')" class="text-xs font-bold text-slate-900 hover:text-brand-blue flex items-center">
+                            Learn Details <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                        </button>
+                        <a href="https://wa.me/27733146069?text=Hello%20Number%20One%20Handyman,%20I%20am%20interested%20in%20Plumbing%20services." class="text-brand-blue hover:text-blue-700 text-lg" title="Quick Quote">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD 04: Electrical -->
+                <div class="glass-panel p-8 rounded-2xl flex flex-col justify-between hover:border-brand-blue transition-all duration-300 group reveal-element">
+                    <div>
+                        <div class="w-14 h-14 bg-slate-900 text-brand-blue rounded-xl flex items-center justify-center text-2xl group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300 mb-6">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <span class="text-xs font-bold text-slate-400 tracking-wider">SERVICE 04</span>
+                        <h3 class="text-xl font-bold text-slate-900 mt-1">Electrical Services</h3>
+                        <p class="text-slate-600 text-sm mt-3 leading-relaxed">Safe electrical repairs, light fixture setups, power outlet installations, DB board inspections, and fault finding.</p>
+                        
+                        <ul class="mt-6 space-y-2 text-xs font-semibold text-slate-700">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Wiring & Outlets</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Light Installations</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> Electrical Fault Isolation</li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4 border-t border-slate-200/60 flex items-center justify-between">
+                        <button onclick="openServiceModal('electrical')" class="text-xs font-bold text-slate-900 hover:text-brand-blue flex items-center">
+                            Learn Details <i class="fa-solid fa-chevron-right text-[10px] ml-1"></i>
+                        </button>
+                        <a href="https://wa.me/27733146069?text=Hello%20Number%20One%20Handyman,%20I%20am%20interested%20in%20Electrical%20services." class="text-brand-blue hover:text-blue-700 text-lg" title="Quick Quote">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 06 — INTERACTIVE SERVICE DETAILS MODAL -->
+    <div id="service-modal" class="fixed inset-0 z-[90] bg-slate-950/70 backdrop-blur-md flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="bg-white rounded-2xl max-w-2xl w-full p-8 shadow-2xl relative border border-slate-200 transform scale-95 transition-transform duration-300">
+            
+            <button onclick="closeServiceModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 text-xl font-bold">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="modal-content">
+                <!-- Content inserted dynamically via JS -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SECTION 07 — QUOTE CALCULATOR -->
+    <section id="calculator" class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-4 reveal-element">
+                    <p class="text-xs font-extrabold tracking-widest text-brand-blue uppercase">Instant Estimator</p>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Configure Your Job Estimate</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Select your required scope to generate an illustrative estimate range. When ready, submit directly to WhatsApp for a direct technical review.
+                    </p>
+                    <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-800 text-xs flex items-start space-x-3">
+                        <i class="fa-solid fa-circle-info text-amber-600 mt-0.5"></i>
+                        <p><strong>Note:</strong> Illustrative Estimate — Final Pricing Requires On-Site or Technical Assessment.</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 reveal-element">
+                    <div class="glass-panel p-8 rounded-2xl shadow-xl bg-white">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            
+                            <!-- Service Selection -->
+                            <div>
+                                <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">Service Type</label>
+                                <select id="calc-service" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                                    <option value="building">General Building</option>
+                                    <option value="renovations">Home Renovations</option>
+                                    <option value="plumbing">Plumbing</option>
+                                    <option value="electrical">Electrical</option>
+                                </select>
+                            </div>
+
+                            <!-- Job Size -->
+                            <div>
+                                <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">Scope Size</label>
+                                <select id="calc-size" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                                    <option value="small">Small Repair / Minor</option>
+                                    <option value="medium" selected>Medium Project</option>
+                                    <option value="large">Large / Full Area</option>
+                                </select>
+                            </div>
+
+                            <!-- Urgency -->
+                            <div>
+                                <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">Urgency</label>
+                                <select id="calc-urgency" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                                    <option value="standard">Standard Schedule</option>
+                                    <option value="urgent">Urgent Priority</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <!-- Estimate Display Box -->
+                        <div class="mt-8 p-6 bg-slate-900 rounded-xl text-white flex flex-col sm:flex-row items-center justify-between">
+                            <div>
+                                <p class="text-xs text-slate-400 font-medium">Estimated Range (ZAR)</p>
+                                <div id="calc-display-price" class="text-3xl font-extrabold text-brand-blue mt-1">R1,500 - R3,500</div>
+                                <p class="text-[10px] text-slate-400 mt-1">Excludes major raw materials if required.</p>
+                            </div>
+                            <button onclick="sendCalculatorWhatsApp()" class="mt-4 sm:mt-0 w-full sm:w-auto bg-brand-blue hover:bg-blue-600 text-white font-bold text-xs px-6 py-3 rounded-lg blue-glow transition-all flex items-center justify-center space-x-2">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                                <span>Request Quote on WhatsApp</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 08 — PROJECT SHOWCASE -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-element">
+                <div>
+                    <p class="text-xs font-extrabold tracking-widest text-brand-blue uppercase">Craftsmanship Gallery</p>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Selected Project Showcase</h2>
+                </div>
+                <div class="mt-4 md:mt-0 flex flex-wrap gap-2" id="project-filters">
+                    <button onclick="filterProjects('all', event)" class="filter-btn active text-xs font-bold px-4 py-2 rounded-lg bg-slate-900 text-white">All</button>
+                    <button onclick="filterProjects('building', event)" class="filter-btn text-xs font-bold px-4 py-2 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Building</button>
+                    <button onclick="filterProjects('renovations', event)" class="filter-btn text-xs font-bold px-4 py-2 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Renovations</button>
+                    <button onclick="filterProjects('plumbing', event)" class="filter-btn text-xs font-bold px-4 py-2 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Plumbing</button>
+                    <button onclick="filterProjects('electrical', event)" class="filter-btn text-xs font-bold px-4 py-2 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200">Electrical</button>
+                </div>
+            </div>
+
+            <!-- Asymmetrical Grid Structure -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="projects-grid">
+                
+                <!-- Project Item 1 -->
+                <div class="project-card building relative rounded-xl overflow-hidden group border border-slate-200 h-80 reveal-element">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Structural Wall Refurbishment" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent p-6 flex flex-col justify-end text-white">
+                        <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">Building</span>
+                        <h3 class="text-lg font-bold">Structural Refurbishment</h3>
+                        <p class="text-xs text-slate-300 mt-1">Masonry repair and structural reinforced finishing.</p>
+                    </div>
+                </div>
+
+                <!-- Project Item 2 -->
+                <div class="project-card renovations md:col-span-2 relative rounded-xl overflow-hidden group border border-slate-200 h-80 reveal-element">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Modern Kitchen Renovation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent p-6 flex flex-col justify-end text-white">
+                        <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">Renovations</span>
+                        <h3 class="text-lg font-bold">Modern Interior Kitchen Upgrade</h3>
+                        <p class="text-xs text-slate-300 mt-1">Full cabinet alignment, counter installation, and tile work.</p>
+                    </div>
+                </div>
+
+                <!-- Project Item 3 -->
+                <div class="project-card plumbing md:col-span-2 relative rounded-xl overflow-hidden group border border-slate-200 h-80 reveal-element">
+                    <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?auto=format&fit=crop&w=800&q=80" alt="Plumbing Infrastructure" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent p-6 flex flex-col justify-end text-white">
+                        <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">Plumbing</span>
+                        <h3 class="text-lg font-bold">High-Pressure System Setup</h3>
+                        <p class="text-xs text-slate-300 mt-1">Copper piping, valve configuration, and sanitary fittings.</p>
+                    </div>
+                </div>
+
+                <!-- Project Item 4 -->
+                <div class="project-card electrical relative rounded-xl overflow-hidden group border border-slate-200 h-80 reveal-element">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=800&q=80" alt="Electrical Panel Maintenance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent p-6 flex flex-col justify-end text-white">
+                        <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">Electrical</span>
+                        <h3 class="text-lg font-bold">DB Board Rewiring & Testing</h3>
+                        <p class="text-xs text-slate-300 mt-1">System safety validation and neat switchgear isolation.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 09 — BEFORE / AFTER COMPARISON -->
+    <section class="py-20 bg-slate-900 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-xs font-extrabold tracking-widest text-brand-blue uppercase">Transformation Quality</p>
+                <h2 class="text-3xl font-extrabold">Renovation Visual Results</h2>
+                <p class="text-slate-400 text-xs mt-2">Drag the slider to compare original state versus completed finish.</p>
+            </div>
+
+            <!-- Interactive Before/After Container -->
+            <div id="before-after-container" class="relative w-full h-[380px] sm:h-[480px] rounded-2xl overflow-hidden select-none border border-slate-800">
+                
+                <!-- After Image (Background) -->
+                <img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80" alt="After Work Finish" class="absolute inset-0 w-full h-full object-cover">
+                <span class="absolute top-4 right-4 bg-brand-blue text-white text-[10px] font-bold px-3 py-1 rounded">AFTER</span>
+
+                <!-- Before Image (Clipped Overlay) -->
+                <div id="before-image-wrap" class="absolute inset-0 w-1/2 overflow-hidden border-r-2 border-brand-blue">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80" alt="Before Work State" class="absolute top-0 left-0 max-w-none h-full w-full object-cover" id="before-img">
+                    <span class="absolute top-4 left-4 bg-slate-900/80 text-white text-[10px] font-bold px-3 py-1 rounded">BEFORE</span>
+                </div>
+
+                <!-- Slider Control -->
+                <input type="range" min="0" max="100" value="50" id="before-after-slider" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30" aria-label="Before and After Comparison Slider">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 10 — WHY CHOOSE US -->
+    <section id="why-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal-element">
+                <p class="text-xs font-extrabold tracking-widest text-brand-blue uppercase">Service Guarantee</p>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-2">Built Around Quality. Designed Around You.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 reveal-element">
+                    <div class="w-12 h-12 bg-slate-900 text-brand-blue rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Professional Workmanship</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">Every task is completed following standard trade practices to ensure durable, aesthetic, and reliable outcomes.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 reveal-element">
+                    <div class="w-12 h-12 bg-slate-900 text-brand-blue rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Clear Communication</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">Direct pricing discussions with no hidden surprises. You remain informed from initial quote to final cleanup.</p>
+                </div>
+
+                <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 reveal-element">
+                    <div class="w-12 h-12 bg-slate-900 text-brand-blue rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Reliable Response</h3>
+                    <p class="text-slate-600 text-sm mt-2 leading-relaxed">Punctual arrival times and swift execution so your daily property routine experiences minimal downtime.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 11 — PROCESS -->
+    <section class="py-20 bg-slate-50 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-xs font-extrabold tracking-widest text-brand-blue uppercase">Simple Step Flow</p>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-2">How We Handle Your Project</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+                
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl border border-slate-200">
+                    <span class="text-3xl font-extrabold text-brand-blue">01</span>
+                    <h3 class="text-base font-bold text-slate-900 mt-3">Tell Us What You Need</h3>
+                    <p class="text-xs text-slate-600 mt-2">Submit details via our quote estimator, contact form, or direct WhatsApp line.</p>
+                </div>
+
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl border border-slate-200">
+                    <span class="text-3xl font-extrabold text-brand-blue">02</span>
+                    <h3 class="text-base font-bold text-slate-900 mt-3">Discuss Requirements</h3>
+                    <p class="text-xs text-slate-600 mt-2">We review your scope, clarify technical details, and assess necessary materials.</p>
+                </div>
+
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl border border-slate-200">
+                    <span class="text-3xl font-extrabold text-brand-blue">03</span>
+                    <h3 class="text-base font-bold text-slate-900 mt-3">Receive Your Quote</h3>
+                    <p class="text-xs text-slate-600 mt-2">Get a straightforward, transparent assessment for approval before work starts.</p>
+                </div>
+
+                <div class="flex flex-col items-start p-6 bg-white rounded-xl border border-slate-200">
+                    <span class="text-3xl font-extrabold text-brand-blue">04</span>
+                    <h3 class="text-base font-bold text-slate-900 mt-3">Get The Job Done</h3>
+                    <p class="text-xs text-slate-600 mt-2">Our professional tradesmen execute the work with clean finish standards.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 13 — EMERGENCY / DIRECT ACTION CTA -->
+    <section class="py-16 bg-slate-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl sm:text-4xl font-extrabold">Need Help With a Property Job?</h2>
+            <p class="text-slate-300 text-sm mt-3 max-w-xl mx-auto">Let's discuss what you need and find the right solution for your home or business.</p>
+            
+            <div class="mt-8 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="tel:+27733146069" class="w-full sm:w-auto bg-brand-blue hover:bg-blue-600 text-white font-bold text-sm px-8 py-4 rounded-xl blue-glow transition-all flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call 073 314 6069</span>
+                </a>
+                <a href="https://wa.me/27733146069" target="_blank" rel="noopener" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm px-8 py-4 rounded-xl border border-slate-700 transition-all flex items-center justify-center space-x-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                    <span>WhatsApp Us Directly</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 14 — CONTACT / LEAD FORM -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Details Column -->
+                <div class="lg:col-span-5 space-y-6">
+                    <p class="text-xs font-extrabold tracking-widest text-brand-blue uppercase">Get In Touch</p>
+                    <h2 class="text-3xl font-extrabold text-slate-900">Request A Dedicated Quote</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">Fill out your project details, and our system will draft a direct WhatsApp message to initiate your enquiry immediately.</p>
+                    
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center space-x-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="w-10 h-10 bg-slate-900 text-brand-blue rounded-lg flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase">Call Directly</p>
+                                <a href="tel:+27733146069" class="text-sm font-bold text-slate-900 hover:text-brand-blue">073 314 6069</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="w-10 h-10 bg-slate-900 text-brand-blue rounded-lg flex items-center justify-center text-lg">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase">Instant Messaging</p>
+                                <a href="https://wa.me/27733146069" target="_blank" class="text-sm font-bold text-slate-900 hover:text-brand-blue">073 314 6069 (WhatsApp)</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="w-10 h-10 bg-slate-900 text-brand-blue rounded-lg flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold text-slate-400 uppercase">Service Coverage</p>
+                                <p class="text-sm font-bold text-slate-900">Serving Local Community & Surrounding Areas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Form Column -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="glass-panel p-8 rounded-2xl bg-white border border-slate-200 space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-name" class="block text-xs font-bold text-slate-800 uppercase mb-1">Full Name *</label>
+                                <input type="text" id="contact-name" required class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                            </div>
+                            <div>
+                                <label for="contact-phone" class="block text-xs font-bold text-slate-800 uppercase mb-1">Phone Number *</label>
+                                <input type="tel" id="contact-phone" required class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="contact-service" class="block text-xs font-bold text-slate-800 uppercase mb-1">Service Required</label>
+                            <select id="contact-service" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm font-semibold focus:ring-2 focus:ring-brand-blue focus:outline-none">
+                                <option value="General Building">General Building & Repairs</option>
+                                <option value="Home Renovations">Home Renovations</option>
+                                <option value="Plumbing">Plumbing Services</option>
+                                <option value="Electrical">Electrical Work</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="contact-message" class="block text-xs font-bold text-slate-800 uppercase mb-1">Message Details</label>
+                            <textarea id="contact-message" rows="4" placeholder="Briefly describe what work needs to be done..." class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-sm focus:ring-2 focus:ring-brand-blue focus:outline-none"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-blue hover:bg-blue-700 text-white font-bold text-sm py-3.5 rounded-lg blue-glow transition-all flex items-center justify-center space-x-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i>
+                            <span>Submit & Send via WhatsApp</span>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 17 — FOOTER -->
+    <footer class="bg-slate-950 text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-8 h-8 bg-brand-blue rounded flex items-center justify-center text-white">
+                            <i class="fa-solid fa-hammer text-sm"></i>
+                        </div>
+                        <span class="font-extrabold text-base tracking-tight">NUMBER ONE</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Providing premier handyman, general building, home renovation, plumbing, and electrical services. Quality craftsmanship you can count on.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-3">Core Services</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#services" class="hover:text-brand-blue">General Building</a></li>
+                        <li><a href="#services" class="hover:text-brand-blue">Home Renovations</a></li>
+                        <li><a href="#services" class="hover:text-brand-blue">Professional Plumbing</a></li>
+                        <li><a href="#services" class="hover:text-brand-blue">Electrical Services</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-3">Quick Navigation</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#home" class="hover:text-brand-blue">Home</a></li>
+                        <li><a href="#calculator" class="hover:text-brand-blue">Quote Estimator</a></li>
+                        <li><a href="#projects" class="hover:text-brand-blue">Project Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-brand-blue">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-3">Direct Contact</h4>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li>Phone: <a href="tel:+27733146069" class="text-white hover:text-brand-blue">073 314 6069</a></li>
+                        <li>WhatsApp: <a href="https://wa.me/27733146069" target="_blank" class="text-white hover:text-brand-blue">073 314 6069</a></li>
+                        <li>Area: Local Community & Surrounding Areas</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 Number One Handyman Services. All rights reserved.</p>
+                <div class="mt-4 sm:mt-0 space-x-4">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SECTION 15 / FLOATING ACTIONS -->
+    <a href="https://wa.me/27733146069" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 bg-brand-blue text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl blue-glow hover:scale-110 transition-transform duration-300" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+
+    <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 left-6 z-40 bg-slate-900 text-white w-10 h-10 rounded-full flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 shadow-md hover:bg-brand-blue" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up text-sm"></i>
+    </button>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Robust Preloader Hide with Fallback
+        const hidePreloader = () => {
+            const preloader = document.getElementById('preloader');
+            if (preloader && preloader.style.display !== 'none') {
+                preloader.style.opacity = '0';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            }
+        };
+
+        if (document.readyState === 'complete') {
+            hidePreloader();
+        } else {
+            window.addEventListener('load', hidePreloader);
+            // Safety fallback: force hide preloader after 1.5 seconds max
+            setTimeout(hidePreloader, 1500);
+        }
+
+        // 2. Mobile Navigation Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('hamburger-icon');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.contains('hidden');
+                if (isOpen) {
+                    mobileMenu.classList.remove('hidden');
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                    menuBtn.setAttribute('aria-expanded', 'true');
+                } else {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            document.querySelectorAll('.mobile-nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+        }
+
+        // 3. Scroll Events (Back to Top)
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (backToTop) {
+                if (window.scrollY > 80) {
+                    backToTop.classList.remove('opacity-0', 'pointer-events-none');
+                } else {
+                    backToTop.classList.add('opacity-0', 'pointer-events-none');
+                }
+            }
+        });
+
+        // 4. Quote Calculator Logic
+        const pricingConfig = {
+            building: { small: "R600 - R1,200", medium: "R1,500 - R3,500", large: "R4,000+" },
+            renovations: { small: "R1,200 - R2,800", medium: "R3,500 - R8,500", large: "R10,000+" },
+            plumbing: { small: "R450 - R950", medium: "R1,200 - R2,500", large: "R3,000+" },
+            electrical: { small: "R500 - R1,100", medium: "R1,400 - R3,000", large: "R3,800+" }
+        };
+
+        function updateCalculator() {
+            const service = document.getElementById('calc-service').value;
+            const size = document.getElementById('calc-size').value;
+            const priceDisplay = document.getElementById('calc-display-price');
+            
+            if (pricingConfig[service] && pricingConfig[service][size]) {
+                priceDisplay.textContent = pricingConfig[service][size];
+            }
+        }
+
+        const calcService = document.getElementById('calc-service');
+        const calcSize = document.getElementById('calc-size');
+        const calcUrgency = document.getElementById('calc-urgency');
+
+        if (calcService) calcService.addEventListener('change', updateCalculator);
+        if (calcSize) calcSize.addEventListener('change', updateCalculator);
+        if (calcUrgency) calcUrgency.addEventListener('change', updateCalculator);
+
+        function sendCalculatorWhatsApp() {
+            const service = document.getElementById('calc-service').selectedOptions[0].text;
+            const size = document.getElementById('calc-size').selectedOptions[0].text;
+            const urgency = document.getElementById('calc-urgency').selectedOptions[0].text;
+            const estimate = document.getElementById('calc-display-price').textContent;
+
+            const text = `Hello Number One Handyman Services,\n\nI would like to request a quote based on my estimate:\n\n- Service: ${service}\n- Scope Size: ${size}\n- Urgency: ${urgency}\n- Estimated Range: ${estimate}\n\nPlease get back to me regarding availability.`;
+            window.open(`https://wa.me/27733146069?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // 5. Service Modal
+        const serviceModalData = {
+            building: {
+                title: "General Building & Maintenance",
+                desc: "We provide expert general building services to repair, structural maintenance, and property upkeep.",
+                features: ["Wall plastering and crack fixes", "Brickwork and masonry repairs", "General structural property fixes", "Boundary wall adjustments"]
+            },
+            renovations: {
+                title: "Home Renovations & Upgrades",
+                desc: "Transform your interior or exterior spaces with modern layout improvements and quality finishes.",
+                features: ["Kitchen remodeling & counter setups", "Bathroom plumbing & tile alignment", "Flooring installation & updates", "Complete room redesigns"]
+            },
+            plumbing: {
+                title: "Professional Plumbing",
+                desc: "Complete diagnostic and installation plumbing services for leak prevention and sanitary fittings.",
+                features: ["Piping installation & repairs", "Leak detection & isolation", "Geyser maintenance & valves", "Sanitary fixture fitting"]
+            },
+            electrical: {
+                title: "Electrical Services",
+                desc: "Safe, compliant electrical work for home lighting, outlets, DB boards, and trouble isolation.",
+                features: ["Light fixture & switch installation", "Power outlet extensions", "DB board inspection", "Electrical fault finding"]
+            }
+        };
+
+        function openServiceModal(key) {
+            const data = serviceModalData[key];
+            if (!data) return;
+
+            const content = `
+                <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">Service Overview</span>
+                <h3 class="text-2xl font-extrabold text-slate-900 mt-1">${data.title}</h3>
+                <p class="text-slate-600 text-sm mt-3 leading-relaxed">${data.desc}</p>
+                <div class="mt-6">
+                    <h4 class="text-xs font-bold text-slate-800 uppercase tracking-wider">What We Handle:</h4>
+                    <ul class="mt-3 space-y-2 text-xs font-semibold text-slate-700">
+                        ${data.features.map(f => `<li class="flex items-center"><i class="fa-solid fa-check text-brand-blue mr-2"></i> ${f}</li>`).join('')}
+                    </ul>
+                </div>
+                <div class="mt-8 flex space-x-3">
+                    <a href="https://wa.me/27733146069?text=${encodeURIComponent('Hello, I am enquiring about ' + data.title)}" target="_blank" class="flex-1 bg-brand-blue text-white font-bold text-xs py-3 rounded-lg text-center blue-glow">Enquire via WhatsApp</a>
+                    <button onclick="closeServiceModal()" class="px-4 bg-slate-100 text-slate-700 font-bold text-xs rounded-lg">Close</button>
+                </div>
+            `;
+
+            document.getElementById('modal-content').innerHTML = content;
+            const modal = document.getElementById('service-modal');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.children[0].classList.remove('scale-95');
+            modal.children[0].classList.add('scale-100');
+        }
+
+        function closeServiceModal() {
+            const modal = document.getElementById('service-modal');
+            modal.children[0].classList.remove('scale-100');
+            modal.children[0].classList.add('scale-95');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        // 6. Project Filters
+        function filterProjects(category, e) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => btn.classList.remove('bg-slate-900', 'text-white'));
+            if (e && e.target) {
+                e.target.classList.add('bg-slate-900', 'text-white');
+            }
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 7. Before/After Drag Slider
+        const slider = document.getElementById('before-after-slider');
+        const beforeWrap = document.getElementById('before-image-wrap');
+        const beforeImg = document.getElementById('before-img');
+        const container = document.getElementById('before-after-container');
+
+        if (slider && beforeWrap && beforeImg && container) {
+            function updateBeforeWidth() {
+                const val = slider.value;
+                beforeWrap.style.width = `${val}%`;
+                beforeImg.style.width = `${container.offsetWidth}px`;
+            }
+            slider.addEventListener('input', updateBeforeWidth);
+            window.addEventListener('resize', updateBeforeWidth);
+            updateBeforeWidth();
+        }
+
+        // 8. Contact Form Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const service = document.getElementById('contact-service').value;
+            const message = document.getElementById('contact-message').value;
+
+            const text = `Hello Number One Handyman Services,\n\nNew Quote Enquiry:\n\n- Name: ${name}\n- Phone: ${phone}\n- Service: ${service}\n- Message: ${message}`;
+            window.open(`https://wa.me/27733146069?text=${encodeURIComponent(text)}`, '_blank');
+        }
+
+        // 9. Intersection Observer Scroll Reveal
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal-element').forEach(el => observer.observe(el));
+        } else {
+            document.querySelectorAll('.reveal-element').forEach(el => el.classList.add('active'));
+        }
+    </script>
+</body>
+</html>
